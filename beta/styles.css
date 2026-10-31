@@ -1,4 +1,14 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Thin.ttf);
+    font-weight: 100;
+}
 
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Light.ttf);
+    font-weight: 300;
+}
 
 @font-face {
     font-family: 'Roboto';
@@ -17,8 +27,8 @@
     font-family: 'Roboto';
     src: url(../fonts/Roboto-Bold.ttf);
     font-weight: 700;
-    font-style: bold;
 }
+
 
 :root{
 
@@ -79,7 +89,7 @@ body{
 
     main{
         width: 100%;
-        max-width: 1000px; /*stops it from growing*/
+        max-width: 1200px; /*stops it from growing*/
         margin-bottom: 100px;
     }
 
@@ -148,27 +158,36 @@ body{
             flex-direction: row;
 
             justify-content: space-around;
+            margin-bottom: 20px;
+            
 
             .object{
 
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                max-width: 350px;
+                padding: 0 15px;
+                margin: 0 15px;
 
                 ul{
                     font-weight: normal;
+
+                    li{
+                        padding: 0;
+                    }
                   
                 }
 
               
             }
-
-                
+  
         }
 
                 ul{
                     list-style-type: "✦  ";
                     font-weight: 500;
+                    padding-left: 30px;
 
                     ul{
                         margin-top: 4px;
@@ -185,51 +204,173 @@ body{
    }
 
 
-   /*7*/
-    .visual{
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        
-        margin: 20px auto;
-        width: 80%;
-
-
-        video{
-            margin: 0 auto;
-            width: 100%;
-            height: auto;
-            max-width: 700px;
-        } 
-    }
-
-    .image-visual{
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        
-        margin: 20px auto;
-        width: 80%;
-
-        border: #000 solid 1px;
-        transition: transform 0.3s ease
-    }
-
-    .image-visual:hover{
-        transform: scale(2);
-    }
-
 
     .navigation{
         max-width: 400px;
     }
 
-    /*ALPHA BUILD*/
-    .build{
+    /*BETA BUILD*/
+    .beta-build{
         display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px;
+
+
+        .album-cover{
+
+            .album-button{
+                height: 200px;
+
+                transition: 0.25s ease-in-out;
+            }
+
+            .album-button:hover{
+                transform: scale(1.1);
+            }
+
+        }
+
+       .footer-icon {
+            .spotify {
+                width: 70px;
+                height: 70px;
+                cursor: pointer;
+            }
+
+            .spotify-black {
+                fill: var(--black);
+            }
+
+            .spotify-blue {
+                fill: var(--blue);
+            }
+
+            .reveal-circle {
+                transition: r 0.3s ease-out; /*circle radius is 0*/
+            }
+
+            .spotify:hover .reveal-circle{ /*hover over the spotify icon and the circle does the animation...*/
+                r: 12;
+            }    
+        }
+
+        .tour-ticket-button{
+                        .button{
+                            background-color: var(--white);
+                            color: var(--black);
+                            border: var(--black) 2px solid;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            padding: 10px 30px;
+                            text-decoration: none;
+
+                            transition-duration: 0.2s;
+                        }
+
+                        .button:hover{
+                            background-color: var(--blue);
+                            color: var(--white);
+                            border-color: var(--blue);
+                        }
+        }
+    }
+
+    .overlay-album-cover{
+        transition: ease-out 0.3s;
+
+        opacity: 0;
+        visibility: hidden;
+
+
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.3);
+
+        position: fixed;
+        inset: 0; /*shorthand for top, right, bottom and left!*/
+        z-index: 50;
+
+        display: flex;
+        align-items: center;
         justify-content: center;
-        margin: 10px;
-        padding-top: 10px;
+
+
+        .overlay-info{
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.65) 100%), url(assets/flaws-and-all.jpeg) lightgray 50% / cover no-repeat;
+            display: flex;
+            width: 600px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            margin: auto;
+            padding: 80px 0;
+            
+            p,h1,h3{
+                margin: 0;
+                color: var(--white);
+            }
+
+            p{
+                font-weight: 300;
+            }
+
+            .title{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+
+                
+                h2{
+                    margin-top: 0;
+                    background-color: transparent;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+
+                }
+            }
+            
+            .song-disc{
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                p{
+                    text-transform: capitalize;
+                }
+
+                .disc{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 50px;
+                }
+
+            }
+
+            .overlay-icons{
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+
+                img{
+                    height: 45px;
+                    cursor: pointer;
+                }
+
+                .yt-logo{
+                    height: 42px;
+                }
+            }
+        }
+    }
+    
+    .overlay-album-cover.show{
+        transition: ease-in 0.3s;
+        opacity: 1;
+        visibility: visible;
     }
 
 
