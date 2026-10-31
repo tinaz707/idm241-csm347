@@ -226,6 +226,7 @@ body{
 
             .album-button{
                 height: 200px;
+                cursor: pointer;
 
                 transition: 0.25s ease-in-out;
             }
