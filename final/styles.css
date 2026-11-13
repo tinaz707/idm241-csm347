@@ -83,6 +83,7 @@ body{
         margin-top: 8px;
     }
 
+
     a{
        color: var(--black);
        
@@ -119,7 +120,7 @@ body{
                 flex-direction: column;
                 align-items: center;
                   padding: 10px 0;
-                  list-style: none;
+                list-style: none;
             }
           
         }
@@ -156,232 +157,86 @@ body{
 
         text-align: left;
 
-
-        .objects-section{
-            display: flex;
-            flex-direction: row;
-
-            justify-content: space-around;
-            margin-bottom: 20px;
-            
-            
-
-            .object{
-
+        .triggers{
+            .overlay-buttons{
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                max-width: 350px;
-                padding: 0 15px;
-                margin: 0 15px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px 60px;
+                max-width: 100%;
 
-                h3{
-                    text-align: center;
+                li{
+                    
+                    min-width: 130px;
                 }
-                
-                ul{
-                    font-weight: normal;
-
-                    li{
-                        padding: 0;
-                    }
-                  
-                }
-
-              
             }
-  
-        }
 
-                ul{
-                    list-style-type: "✦  ";
-                    font-weight: 500;
-                    padding-left: 30px;
+            .one-section-triggers{
+                li{
+                    font-weight:400;
+                }
+            }
+            .objects-section{
+                display: flex;
+                flex-direction: row;
 
-                    ul{
-                        margin-top: 4px;
-                        margin-bottom: 10px;
-                        list-style-type: circle;
-                        font-weight: normal;
+                justify-content: space-around;
+                margin-bottom: 20px;
+                
+                
+
+
+                .object{
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    max-width: 350px;
+                    padding: 0 15px;
+                    margin: 0 15px;
+
+                    h3{
+                        text-align: center;
                     }
+                    
+                    ul{
+                        font-weight: normal;
+
+                        li{
+                            padding: 0;
+                        }
+                    
+                    }
+
+                
                 }
 
 
-                .normal-weight{
-                    font-weight: normal;
-                }
+    
+            }
+
+          
+            }
+
+
+        .normal-weight{
+            font-weight: normal;
+        }  
+        
+        section ul{
+                list-style-type: "✦  ";
+                font-weight: 500;
+            padding-left: 30px;
+
    }
 
 
-
-    .navigation{
-        max-width: 400px;
-    }
-
-    /*BETA BUILD*/
-    .beta-build{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        margin: 50px;
-
-
-        .album-cover{
-
-            .album-button{
-                height: 200px;
-                cursor: pointer;
-
-                transition: 0.25s ease-in-out;
-            }
-
-            .album-button:hover{
-                transform: scale(1.1);
-            }
-
-        }
-
-       .footer-icon {
-            .spotify {
-                width: 70px;
-                height: 70px;
-                cursor: pointer;
-            }
-
-            .spotify-black {
-                fill: var(--black);
-            }
-
-            .spotify-blue {
-                fill: var(--blue);
-            }
-
-            .reveal-circle {
-                transition: r 0.3s ease-out; /*circle radius is 0*/
-            }
-
-            .spotify:hover .reveal-circle{ /*hover over the spotify icon and the circle does the animation...*/
-                r: 12;
-            }    
-        }
-
-        .tour-ticket-button{
-                        .button{
-                            background-color: var(--white);
-                            color: var(--black);
-                            border: var(--black) 2px solid;
-                            border-radius: 5px;
-                            cursor: pointer;
-                            padding: 10px 30px;
-                            text-decoration: none;
-
-                            transition-duration: 0.2s;
+                        section ul ul{
+                            margin-top: 4px;
+                            margin-bottom: 10px;
+                            list-style-type: circle;
+                            font-weight: normal;
                         }
-
-                        .button:hover{
-                            background-color: var(--blue);
-                            color: var(--white);
-                            border-color: var(--blue);
-                        }
-        }
-    }
-
-    .overlay-album-cover{
-        transition: ease-out 0.3s;
-
-        opacity: 0;
-        visibility: hidden;
-
-
-        backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.3);
-
-        position: fixed;
-        inset: 0; /*shorthand for top, right, bottom and left!*/
-        z-index: 50;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
-        .overlay-info{
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.65) 100%), url(assets/flaws-and-all.jpeg) lightgray 50% / cover no-repeat;
-            display: flex;
-            width: 600px;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            margin: auto;
-            padding: 80px 0;
-            
-            p,h1,h3{
-                margin: 0;
-                color: var(--white);
-            }
-
-            p{
-                font-weight: 300;
-            }
-
-            .title{
-
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                
-
-                
-                h2{
-                    margin-top: 0;
-                    background-color: transparent;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-
-                }
-            }
-            
-            .song-disc{
-                display: flex;
-                flex-direction: column;
-                gap: 50px;
-
-                p{
-                    text-transform: capitalize;
-                }
-
-                .disc{
-                    display: flex;
-                    flex-direction: row;
-                    gap: 50px;
-                }
-
-            }
-
-            .overlay-icons{
-                display: flex;
-                flex-direction: row;
-                gap: 15px;
-
-                img{
-                    height: 45px;
-                    cursor: pointer;
-                }
-
-                .yt-logo{
-                    height: 42px;
-                }
-            }
-        }
-    }
-    
-    .overlay-album-cover.show{
-        transition: ease-in 0.3s;
-        opacity: 1;
-        visibility: visible;
-    }
 
     .visual{
         display: flex;
@@ -400,34 +255,36 @@ body{
         } 
     }
 
+    }
 }
-
 
 @media (max-width: 600px){
     body{
         padding: 0 15px;
     
-    h1{
-        text-align: center;
-        font-size: 24px;
+        h1{
+            text-align: center;
+            font-size: 24px;
+        }
+
+        h2{
+            font-size: 18px;
+            
+        }
+
+        .info{
+            text-align: center;
+            gap: 10px;    
+        }
+
+        .info, .structure, .visual{
+            width: 90%;
+        }
+
+        ul{ /*scoots it slightly*/
+            padding-left: 25px;
+        }
     }
 
-    h2{
-        font-size: 18px;
-        
-    }
-
-    .info{
-        text-align: center;
-        gap: 10px;    
-    }
-
-    .info, .structure, .visual{
-        width: 90%;
-    }
-
-    ul{ /*scoots it slightly*/
-        padding-left: 25px;
-    }
-    }
+   
 }

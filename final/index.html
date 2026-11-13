@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
         <div class="info">
             <div class="link">
                 <p>Original Interface:</p>
-                <a href="https://wave-to-earth.com/discography" target="_blank" >Wave To Earth Discography Page</a>
+                <a href="https://wave-to-earth.com/discography" target="_blank">Wave To Earth Discography Page</a>
             </div>
             <p class="location">
                 A user can locate the object (an album cover) by going to the Wave to Earth website and selecting the Discography page in the navigation. 
@@ -26,68 +27,80 @@
 
         <div class="structure">
         <!--Trigger-->
-            <section>
+        <section class="triggers">
+                
                 <h2>TRIGGERS:</h2>
-                
-                <div class="objects-section">
-                    
-                  <div class="object">
-                        <h3>Album Cover</h3>
-                        <ul >
-                            <li>
-                                Hover On 
-                            </li>
-                            <li>
-                                Hover Off
-                            </li>
-                            <li>
-                                Click On
-                            </li>
-                            <li>
-                                Click Off
-                            </li>
+
+                <h3>Album Cover:</h3>
+                <ul class="one-section-triggers">
+                    <li>Hover On</li>
+                    <li>Hover Off</li>
+                    <li>Click On</li>
+                </ul>
+
+                <hr>
+
+                <h3>Overlay Close Button:</h3>
+
+                <ul class="one-section-triggers">
+                    <li>Hover On</li>
+                    <li>Hover Off</li>
+                    <li>Click On</li>
+                </ul>
+
+                <hr>
+
+                <h3>Overlay Icon Buttons:</h3>
+
+                <ul class="overlay-buttons">
+
+                    <li>YouTube Icon
+                        <ul>
+                            <li>Hover On</li>
+                            <li>Hover Off</li>
+                            <li>Click On</li>
                         </ul>
+                    </li>
 
-                    </div>
-
-                    <div class="object">
-                        <h3>Overlay Icons:</h3>
-                        <ul >
-                            <li>
-                                Hover On 
-                            </li>
-                            <li>
-                                Hover Off 
-                            </li>
-                            <li>
-                                Click On 
-                            </li>
+                    <li>Spotify Icon
+                        <ul>
+                            <li>Hover On</li>
+                            <li>Hover Off</li>
+                            <li>Click On</li>
                         </ul>
+                    </li>
 
-                    </div>
-
-                    
-                    <div class="object">
-                        <h3>Overlay Arrows:</h3>
-                        <ul >
-                            <li>
-                                Hover On 
-                            </li>
-                            <li>
-                                Hover Off 
-                            </li>
-                            <li>
-                                Click On
-                            </li>
+                    <li>Apple Music Icon
+                        <ul>
+                            <li>Hover On</li>
+                            <li>Hover Off</li>
+                            <li>Click On</li>
                         </ul>
+                    </li>
+                </ul>
 
-                    </div>
+                <hr>
 
+                <h3>Overlay Arrows:</h3>
+                <ul class="overlay-buttons">
+                    <li>Left Arrow
+                        <ul>
+                            <li>Hover On</li>
+                            <li>Hover Off</li>
+                            <li>Click On</li>
+                        </ul>
+                    </li>
 
-                </div>
-                
+                    <li>Right Arrow
+                        <ul>
+                            <li>Hover On</li>
+                            <li>Hover Off</li>
+                            <li>Click On</li>
+                        </ul>                        
+                    </li>
+                </ul>
 
-            </section>
+        </section>
 
             
         <!--Rules--> 
@@ -99,7 +112,7 @@
                     <li>Hover On
                         <ul>
                             <li>Cursor changes from default to pointer</li>
-                            <li>Album covers grows slightly</li>
+                            <li>Album cover grows slightly</li>
                         </ul>
                     </li>
 
@@ -112,64 +125,152 @@
 
                     <li>Click On
                         <ul>
-                            <li>Overlay fades in from 1% to 100% opacity</li>
-                        </ul>
-                    </li>
-
-                    <li>Click Off
-                        <ul>
-                            <li>Overlay fades out from 100% to 0% opacity</li>
+                            <li>Overlay fades in from 0% to 100% opacity</li>
                         </ul>
                     </li>
                 </ul>
 
-                <h3>Overlay Icons:</h3>
+                <hr>
+
+                <h3>Overlay Close Button:</h3>
                 <ul>
                     <li>Hover On
                         <ul>
                             <li>Cursor changes from default to pointer</li>
-                            <li>Icon changes from white to blue</li>
                         </ul>
                     </li>
 
                     <li>Hover Off
                         <ul>
                             <li>Cursor changes from pointer to default</li>
-                            <li>Icon changes from blue to white</li>
                         </ul>
                     </li>
 
                     <li>Click On
                         <ul>
-                            <li>User redirected to a new page that's related to that icon</li>
+                            <li>Overlay fades out from 100% to 0%</li>
                         </ul>
                     </li>
                 </ul>
 
-                
+                <hr>
+
+                <h3>Overlay Icon Buttons:</h3>
+                <ul class="overlay-buttons">
+
+                    <li>YouTube Icon
+                        <ul>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                    <li>Icon changes from white to blue</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                    <li>Icon changes from blue to white</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>User is redirected to the YouTube playlist for the album</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>Spotify Icon
+                        <ul>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                    <li>Icon changes from white to blue</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                    <li>Icon changes from blue to white</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>User is redirected to the Spotify playlist for the album</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>Apple Music Icon
+                        <ul>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                    <li>Icon changes from white to blue</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                    <li>Icon changes from blue to white</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>User is redirected to the Apple Music playlist for the album</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <hr>
+
                 <h3>Overlay Arrows:</h3>
-                <ul>
-                    <li>Hover On
+                <ul class="overlay-buttons">
+
+                    <li>Left Arrow
                         <ul>
-                            <li>Cursor changes from default to pointer</li>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>Overlay information updates to display the previous album on the grid</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
 
-                    <li>Hover Off
+                    <li>Right Arrow
                         <ul>
-                            <li>Cursor changes from pointer to default</li>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>Overlay information updates to display the next album on the grid</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
-
-                    <li>Click On
-                        <ul>
-                            <li>Right Arrow displays the next album on the grid</li>
-                            <li>Left Arrow displays the previous album on the grid</li>
-                            <li>Album description updates</li>
-                        </ul>
-                    </li>
-                    
                 </ul>
+
             </section>
 
             
@@ -182,7 +283,7 @@
                     <li>Hover On
                         <ul>
                             <li>Cursor changes from default to pointer</li>
-                            <li>Album covers grows slightly</li>
+                            <li>Album cover grows slightly</li>
                         </ul>
                     </li>
 
@@ -195,64 +296,152 @@
 
                     <li>Click On
                         <ul>
-                            <li>Overlay fades in from 1% to 100% opacity</li>
-                        </ul>
-                    </li>
-
-                    <li>Click Off
-                        <ul>
-                            <li>Overlay fades out from 100% to 0% opacity</li>
+                            <li>Overlay fades in from 0% to 100% opacity</li>
                         </ul>
                     </li>
                 </ul>
 
-                <h3>Overlay Icons:</h3>
+                <hr>
+
+                <h3>Overlay Close Button:</h3>
                 <ul>
                     <li>Hover On
                         <ul>
                             <li>Cursor changes from default to pointer</li>
-                            <li>Icon changes from white to blue</li>
                         </ul>
                     </li>
 
                     <li>Hover Off
                         <ul>
                             <li>Cursor changes from pointer to default</li>
-                            <li>Icon changes from blue to white</li>
                         </ul>
                     </li>
 
                     <li>Click On
                         <ul>
-                            <li>User redirected to a new page that's related to that icon</li>
+                            <li>Overlay fades out from 100% to 0%</li>
                         </ul>
                     </li>
                 </ul>
 
-                
+                <hr>
+
+                <h3>Overlay Icon Buttons:</h3>
+                <ul class="overlay-buttons">
+
+                    <li>YouTube Icon
+                        <ul>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                    <li>Icon changes from white to blue</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                    <li>Icon changes from blue to white</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>User is redirected to the YouTube playlist for the album</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>Spotify Icon
+                        <ul>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                    <li>Icon changes from white to blue</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                    <li>Icon changes from blue to white</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>User is redirected to the Spotify playlist for the album</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>Apple Music Icon
+                        <ul>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                    <li>Icon changes from white to blue</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                    <li>Icon changes from blue to white</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>User is redirected to the Apple Music playlist for the album</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <hr>
+
                 <h3>Overlay Arrows:</h3>
-                <ul>
-                    <li>Hover On
+                <ul class="overlay-buttons">
+
+                    <li>Left Arrow
                         <ul>
-                            <li>Cursor changes from default to pointer</li>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>Overlay information updates to display the previous album on the grid</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
 
-                    <li>Hover Off
+                    <li>Right Arrow
                         <ul>
-                            <li>Cursor changes from pointer to default</li>
+                            <li>Hover On
+                                <ul>
+                                    <li>Cursor changes from default to pointer</li>
+                                </ul>
+                            </li>
+                            <li>Hover Off
+                                <ul>
+                                    <li>Cursor changes from pointer to default</li>
+                                </ul>
+                            </li>
+                            <li>Click On
+                                <ul>
+                                    <li>Overlay information updates to display the next album on the grid</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
-
-                    <li>Click On
-                        <ul>
-                            <li>Right Arrow displays the next album on the grid</li>
-                            <li>Left Arrow displays the previous album on the grid</li>
-                            <li>Album description updates</li>
-                        </ul>
-                    </li>
-                    
                 </ul>
+
             </section>
 
         <!--Loops&Modes--> 
@@ -263,7 +452,7 @@
                 <ul>
                     <li>Modes
                         <ul>
-                            <li>Overlay remains open until the user clicks outside of it</li>
+                            <li>Overlay remains open until the user clicks the close button</li>
                         </ul>
                     </li>
                     
@@ -274,10 +463,6 @@
                     </li>
                 </ul>
 
-                <h3>Overlay Icons:</h3>
-                <ul>
-                    <li class="normal-weight">N/A</li>
-                </ul>
 
                 <h3>Overlay Arrows:</h3>
 
@@ -298,21 +483,18 @@
 
         <!--Visual-->
 
-        <section >
+        <section>
             <h2>VISUALIZATION</h2>
 
-           
             <video class="visual" controls muted> <!--add width,100%, -->
-                <source src="assets/final_visual.mp4" type="video/mp4">
+                <source src="assets/final_visual2.mp4" type="video/mp4">
             </video>
 
-   
         </section>
         </div>
        
     </main>
 
-
-
 </body>
 </html>
+```
