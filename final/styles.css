@@ -147,6 +147,307 @@ body{
 
         }        
     }
+
+        .album-cover{
+            display: flex;
+            justify-content: center;
+            padding: 20px 50px;
+            margin: auto;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .button-album{
+                border: none;
+                background-color: transparent;
+            }
+            .album-button{
+                height: 200px;
+                cursor: pointer;
+
+                transition: 0.3s ease-in-out;
+            }
+
+            .album-button:hover{
+                transform: scale(1.1);
+            }
+
+        }    
+
+    .overlay-album-cover{
+        transition: ease-out 0.3s;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+
+
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.5);
+
+        position: fixed;
+        inset: 0; /*shorthand for top, right, bottom and left!*/
+        z-index: 50;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        .overlay-content{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+
+            .overlay-arrow{
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                svg{
+                    color: white;
+                    transition: color 0.3s ease;
+                }
+
+            }
+
+            .overlay-arrow:hover svg{
+                color: var(--blue);
+            }
+          
+
+
+            .overlay-info{
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.65) 100%), url(assets/flaws-and-all.jpeg) lightgray 50% / cover no-repeat;
+                display: flex;
+                width: 600px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+                margin: auto;
+                padding: 80px 0;
+                
+                position: relative;
+                height: 800px;
+
+                p,h1,h3{
+                    margin: 0;
+                    color: var(--white);
+                }
+
+                p{
+                    font-weight: 300;
+                }
+
+                .exit-button{
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                     position: absolute;
+                    top: 20px;
+                    right: 20px;
+
+                    svg{
+                            color: white;
+                            transition: color 0.3s ease;
+
+                    }
+                }
+
+                .exit-button:hover svg{
+                    color: var(--blue);
+                }
+
+                .album-discs-overlay{
+                    
+                        display: none;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 40px;
+                        
+                    .title{
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        
+
+                        
+                        h2{
+                            margin-top: 0;
+                            background-color: transparent;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+
+                        }
+                    }
+                    
+                    .song-disc{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 50px;
+
+                        p{
+                            text-transform: capitalize;
+                        }
+
+                        .disc{
+                            display: flex;
+                            flex-direction: row;
+                            gap: 50px;
+
+                            .songs p{
+                                text-transform: lowercase;
+                            }
+                        }
+
+                    }
+
+                        .overlay-icons{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 10px;
+
+                            a{
+                                width: 50px;
+                                height: 50px;
+
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            
+
+     
+                            #spotify {
+                                /* padding: 2px; */
+                                margin-left: 10px;
+                            }
+
+                        #apple-music{
+                            padding: 6px;
+                        }
+                       .logo{
+                                cursor: pointer;
+                                color: white;
+                                /* fill: currentColor; */
+                                transition: color 0.3s ease;
+                                
+                            }
+                            .logo:hover{
+                                color: var(--blue);
+                            }
+
+
+                        
+                        }                    
+                }
+
+                .album-discs-overlay.show{
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                }
+
+                /*for dried flowers album*/
+                .single-overlay-format{
+            
+                        display: none;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 40px;
+                        
+                    .title{
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        
+
+                        
+                        h2{
+                            margin-top: 0;
+                            background-color: transparent;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+
+                        }
+                    }
+                     .single-info{
+                        h3{
+                            text-align: center;
+                            font-weight: 400;
+                        }
+                            p{
+                                font-weight: 100;
+                                font-style: italic;
+                                font-size: 18px;
+                            }
+                        }
+                   
+
+                        .overlay-icons{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 10px;
+
+                            a{
+                                width: 50px;
+                                height: 50px;
+
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            
+
+                            .logo{
+                                cursor: pointer;
+                                color: white;
+                                fill: currentColor;
+                                transition: fill 0.3s ease;
+                                
+                            }
+
+                            #spotify {
+                                /* padding: 2px; */
+                                margin-left: 10px;
+                            }
+                        #apple-music{
+                            padding: 6px;
+                        }
+
+                            .logo:hover{
+                                fill: var(--blue);
+                            }
+
+                        
+                        }                    
+                }
+
+                .single-overlay-format.show{
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                }
+    
+            }   
+        }
+
+
+    }
+    
+    .overlay-album-cover.show{
+        transition: ease-in 0.3s;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+    }
     
     /*3-6*/
    .structure{
@@ -264,12 +565,16 @@ body{
     
         h1{
             text-align: center;
-            font-size: 24px;
+            font-size: 20px;
         }
 
         h2{
             font-size: 18px;
             
+        }
+
+        p{
+            font-size: 14px;
         }
 
         .info{
@@ -284,7 +589,58 @@ body{
         ul{ /*scoots it slightly*/
             padding-left: 25px;
         }
-    }
 
-   
+        .overlay-album-cover {
+            background: none;
+        
+
+            .overlay-content {
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.65) 100%), url(assets/flaws-and-all.jpeg) lightgray 50% / cover no-repeat;
+
+                width: 100%;
+                padding: 0 10px;
+                gap: 5px;
+
+                .overlay-arrow {
+                
+
+                    svg {
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+
+                .overlay-info {
+                    width: 100%;
+                    min-width: 0;
+                    height: auto;
+                    min-height: 600px;
+
+                    .exit-button{
+                        top: 30px;
+                        right: -50px;
+
+                        svg{
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                    }
+
+                    .album-discs-overlay{
+                        .song-disc{
+                            gap: 15px;
+                        .disc{
+                                flex-direction: column;
+                                gap: 0;
+                                text-align: center;
+                        } 
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
 }
+
