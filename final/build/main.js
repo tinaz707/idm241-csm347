@@ -57,6 +57,8 @@ const albumCoverData = [
         date: "10.11.22",
         title: "Dried Flower",
         type: "single",
+        disc1: null,
+        disc2: null,
         img: "../assets/dried_flower.jpg",
         // youtube: "https://www.youtube.com/watch?v=6tqFCcERhoQ&list=OLAK5uy_k0kRJK3VhzOtAW9J26zucclGkQ3wcposc",
         // spotify: "https://open.spotify.com/album/7uGypjatRUHbWUxUwynTTn?si=OInuGCjRQNeILDlw0FuYQg",
@@ -74,6 +76,8 @@ const playFlaws = document.getElementById('flaws-and-all-cover');
 const playCoverFlower = document.getElementById('dried-flower-cover');
 
 const albumPic = document.getElementById('overlay-info-box');
+const mobileAlbumPic = document.getElementById('updating-image');
+
 //whole box for aside
 const albumOverlay = document.getElementById('album-overlay');
 
@@ -148,16 +152,36 @@ const youtubeLogo = document.getElementById('yt-logo');
 const spotifyLogo = document.getElementById('spotify-logo');
 const appleLogo = document.getElementById('music-logo');
 
+
+ //resize listener
+   
+ window.addEventListener("resize", () => {
+    updateUi(albumCoverData[currentIndex]);
+});
+
 function updateUi(album){
+      
+    const albumBackground =
+        `linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.65) 100%), url('${album.img}')`;
+        
+
+    
     aDate.innerText = album.date;
     aTitle.innerText = album.title;
     youtubeLogo.href = album.youtube;
     spotifyLogo.href = album.spotify;
     appleLogo.href = album.apple;
 
-    albumPic.style.backgroundImage = 
-    `linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.65) 100%), url('${album.img}')`;
-    
+   
+
+if (window.innerWidth <= 750) {
+    mobileAlbumPic.style.backgroundImage = albumBackground;
+    albumPic.style.backgroundImage = "none";
+} else {
+    albumPic.style.backgroundImage = albumBackground;
+    mobileAlbumPic.style.backgroundImage = "none";
+}
+
     if (album.type === "single"){
         albumFormat.classList.remove('show');
         singleFormat.classList.add('show');
