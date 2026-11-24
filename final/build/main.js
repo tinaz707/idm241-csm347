@@ -136,15 +136,40 @@ const rightArrow = document.getElementById('right-arrow');
 const leftArrow = document.getElementById('left-arrow');
 let currentIndex = 0; //this is needed to remember Which album your currently on
 
+let isAnimating = false; //is animation happening (no)
 
 rightArrow.addEventListener("click", ()=>{
+
+    if (isAnimating) return; //if true dont let arrows work
+    isAnimating = true; //animation happening
+
+
     currentIndex = (currentIndex + 1) % albumCoverData.length;
     updateUi(albumCoverData[currentIndex]);
+
+     albumPic.classList.add('album-change-right'); //the animation
+
 })
 
 leftArrow.addEventListener("click", () => {
+  
+    if (isAnimating) return;
+    isAnimating = true;
+
+
+  
     currentIndex = (currentIndex - 1 + albumCoverData.length) % albumCoverData.length;
     updateUi(albumCoverData[currentIndex]);
+
+        albumPic.classList.add('album-change-left');
+
+});
+
+albumPic.addEventListener("animationend", () => { //once animation is over remove the class
+    isAnimating = false; //let arrows work
+    albumPic.classList.remove('album-change-right');
+    albumPic.classList.remove('album-change-left');
+
 });
 
 //album icons (none for single type bc thats already set in html)
